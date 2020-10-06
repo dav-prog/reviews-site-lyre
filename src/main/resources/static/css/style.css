@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 50px;
+
+
+}
+
+.navbar ul li {
+    list-style-type: none;
+    float: left;
+    
+}
+
+.navbar ul li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+}
