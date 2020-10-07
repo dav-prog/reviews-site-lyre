@@ -7,19 +7,17 @@
 .navbar {
     height: 50px;
     color: white;
-
-
 }
 
-.navbar ul li {
-    list-style-type: none;
-    float: left;
-    
+body {
+    color: white;
+}
+.home-body{
+    display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: repeat(2, 1fr);  
 }
 
-.navbar ul li a {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 16px;
+.card{
+    margin-left: 10%;    
 }
-
