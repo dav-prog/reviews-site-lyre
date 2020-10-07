@@ -1,23 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    background-image: url(../IMG/ralph-ravi-kayden-TozxLU79LXY-unsplash.jpg);
+    background-size: cover;
 }
-
-.navbar {
-    height: 50px;
-
-
-}
-
-.navbar ul li {
-    list-style-type: none;
-    float: left;
+.box-img {
+    width: 450px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
     
 }
-
-.navbar ul li a {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 16px;
+.Categories li {
+    list-style-type: none;
+}
+.Categories li a {
+    text-decoration: none;
+    color: white;
 }
