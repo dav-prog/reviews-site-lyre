@@ -10,9 +10,34 @@
 }
 
 body {
-    color: white;
+    color: red;
 }
 
 .card{
     margin-left: 10%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    align-items: center;
+
+}
+.card-container{
+}
+.header {
+    color: red;
+}
+.hash-box {
+    background-color: aliceblue;
+    width: 150px;
+    height: 150px;
+    color: black;
+    margin: 1rem;
+}
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
