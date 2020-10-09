@@ -1,17 +1,17 @@
 package org.wecancodeit.reviews;
 
-public class Reviews {
+public class Review {
 
     private String storeName;
     private String categories;
-    private String reviews;
+    private String content;
     private String userName;
     private String hashtags;
 
-    public Reviews(String storeName, String categories, String reviews, String userName, String hashtags) {
+    public Review(String storeName, String categories, String content, String userName, String hashtags) {
         this.storeName = storeName;
         this.categories = categories;
-        this.reviews = reviews;
+        this.content = content;
         this.userName = userName;
         this.hashtags = hashtags;
     }
@@ -24,8 +24,8 @@ public class Reviews {
         return categories;
     }
 
-    public String getReviews() {
-        return reviews;
+    public String getContent() {
+        return content;
     }
 
     public String getUserName() {
