@@ -49,3 +49,6 @@ img {
 .card-container {
     padding: 2px 16px;
 }
+html {
+    background-color: burlywood;
+}
