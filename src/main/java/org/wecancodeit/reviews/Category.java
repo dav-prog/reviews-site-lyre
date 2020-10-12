@@ -2,7 +2,7 @@ package org.wecancodeit.reviews;
 
 import java.util.Collection;
 
-public class Categories {
+public class Category {
 
     private String categoryName;
     private Collection<Review> reviews;
@@ -20,7 +20,7 @@ public class Categories {
         return description;
     }
 
-    public Categories(String categoryName, Collection<Review> reviews, String description) {
+    public Category(String categoryName, Collection<Review> reviews, String description) {
         this.categoryName = categoryName;
         this.reviews = reviews;
         this.description = description;

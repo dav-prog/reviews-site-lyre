@@ -30,7 +30,9 @@
             nihil libero eos incidunt laboriosam nemo est eum perferendis?</p>
         <h2 class="Con-List">Categories</h2>
         <ul class="Categories">
-            <li th:each="category:${categories}"><a th:text="${category.categoryName}" href="./Specialty.html">Specialty</a></li>
+            <li th:each="category:${categories}"><a th:text="${category.categoryName}" th:href="./Specialty.html">Specialty</a>
+            </li>
+
         </ul>
     </nav>
 

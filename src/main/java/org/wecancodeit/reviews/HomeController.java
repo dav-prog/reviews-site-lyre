@@ -12,9 +12,9 @@ public class HomeController {
 
     @RequestMapping({"","/"})
     public String returnHomeView(Model model){
-        Categories cat1 = new Categories("test", Collections.EMPTY_LIST , "");
-        model.addAttribute("categories", List.of(cat1));
+        Category cat1 = new Category("Specialty", Collections.EMPTY_LIST , "");
+        Category cat2 = new Category("BigBox", Collections.EMPTY_LIST , "");
+        model.addAttribute("categories", List.of(cat1, cat2));
         return "Home";
     }
-
 }
