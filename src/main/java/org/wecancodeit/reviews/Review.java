@@ -7,13 +7,15 @@ public class Review {
     private String content;
     private String userName;
     private String hashtags;
+    private long id;
 
-    public Review(String storeName, String categories, String content, String userName, String hashtags) {
+    public Review(String storeName, String categories, String content, String userName, String hashtags,long id) {
         this.storeName = storeName;
         this.categories = categories;
         this.content = content;
         this.userName = userName;
         this.hashtags = hashtags;
+        this.id = id;
     }
 
     public String getStoreName() {
@@ -35,6 +37,9 @@ public class Review {
     public String getHashtags() {
         return hashtags;
     }
+
+    public long getId() { return id;}
+
 }
 
 

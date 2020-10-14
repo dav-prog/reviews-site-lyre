@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <nav class="navbar">
         <ul>
-            <li><a th:href="'Home'">Home</a></li>
+            <li><a th:href="'/Home'">Home</a></li>
             <li><a href="#">Reviews</a></li>
         </ul>
     </nav>
@@ -30,7 +30,7 @@
             nihil libero eos incidunt laboriosam nemo est eum perferendis?</p>
         <h2 class="Con-List">Categories</h2>
         <ul class="Categories">
-            <li th:each="category:${categories}"><a th:text="${category.categoryName}" th:href="${category.categoryName}">Specialty</a>
+            <li th:each="category:${categories}"><a th:text="${category.categoryName}" th:href="'/category/' + ${category.categoryName}">Specialty</a>
             </li>
 
         </ul>
