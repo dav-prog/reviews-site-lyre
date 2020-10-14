@@ -11,18 +11,17 @@ import java.util.List;
 @Controller
 public class CategoryController {
 
-    private final Category cat1;
-    private final Category cat2;
+    private  Category cat1;
+    private  Category cat2;
 
     public CategoryController() {
         cat1 = new Category("Specialty", Collections.EMPTY_LIST, "Specialty stores are full of special food.");
         cat2 = new Category("Big Box", Collections.EMPTY_LIST, "Big box stores are big boxes full of food.");
     }
 
-    @RequestMapping("{categoryName}")
-    public String returnCategoryController(Model model, @PathVariable String categoryName) {
+    @RequestMapping("/category/{categoryName}")
+    public String displayCategoryPage(Model model, @PathVariable String categoryName) {
         model.addAttribute("category", cat1);
-        model.addAttribute("category", cat2);
         return "Category";
     }
 
