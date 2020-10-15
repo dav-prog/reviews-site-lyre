@@ -9,12 +9,16 @@ import java.util.List;
 
 @Controller
 public class HomeController {
+   private CategoryStorage categoryStorage;
+
+    public HomeController(CategoryStorage categoryStorage) {
+        this.categoryStorage = categoryStorage;
+    }
 
     @RequestMapping({"","/","Home"})
     public String returnHomeView(Model model){
-        Category cat1 = new Category("Specialty", Collections.EMPTY_LIST , "");
-        Category cat2 = new Category("Big Box", Collections.EMPTY_LIST , "");
-        model.addAttribute("categories", List.of(cat1, cat2));
+
+        model.addAttribute("categories", categoryStorage.retrieveAllCategories());
         return "Home";
     }
 }

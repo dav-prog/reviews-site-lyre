@@ -2,28 +2,41 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
 
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Optional;
 
 @Service
 public class CategoryStorage {
-    Collection<Category>categories = new ArrayList<>(); //replace this with a line repository
+    private CategoryRepository categoryRepo;
 
-    private Category cat1;
-    private Category cat2;
 
-    public void addCategory() {
-        categories.add(cat1);
-        categories.add(cat2);
+    public CategoryStorage(CategoryRepository categoryRepo) {
+        this.categoryRepo = categoryRepo;
+    }
 
-        cat1 = new Category("Specialty", Collections.EMPTY_LIST, "Specialty stores are full of special food.");
-        cat2 = new Category("Big Box", Collections.EMPTY_LIST, "Big box stores are big boxes full of food.");
+
+
+    public void addCategory(Category categoryToAdd) {
+        categoryRepo.save(categoryToAdd);
+
 
     }
+
     public Iterable<Category> retrieveAllCategories() {
-        return categories;
+        return categoryRepo.findAll();
     }
 
-    public
+    public Category retrieveCategoryById(Long id) {
+        Optional<Category> retrievedCategoryOptional = categoryRepo.findById(id);
+        if (retrievedCategoryOptional.isPresent()) {
+            Category retriedCategory = retrievedCategoryOptional.get();
+            return retriedCategory;
+        }else{
+            return null;
+        }
+    }
+
 }

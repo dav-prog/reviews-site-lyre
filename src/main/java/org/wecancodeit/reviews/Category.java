@@ -1,12 +1,20 @@
 package org.wecancodeit.reviews;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Collection;
-
+@Entity
 public class Category {
 
+    @Id
+    @GeneratedValue
+    private Long id;
     private String categoryName;
     private Collection<Review> reviews;
     private String description;
+
+    protected Category() { }
 
     public String getCategoryName() {
         return categoryName;

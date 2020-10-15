@@ -1,2 +1,6 @@
-package org.wecancodeit.reviews;public class ReviewRepository {
+package org.wecancodeit.reviews;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ReviewRepository extends CrudRepository {
 }

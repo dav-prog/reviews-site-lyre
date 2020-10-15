@@ -10,13 +10,15 @@ import java.util.List;
 
 @Controller
 public class CategoryController {
+    private CategoryStorage categoryStorage;
 
-    public CategoryController() {
+    public CategoryController(CategoryStorage categoryStorage) {
+        this.categoryStorage = categoryStorage;
     }
 
-    @RequestMapping("/category/{categoryName}")
-    public String displayCategoryPage(Model model, @PathVariable String categoryName) {
-        model.addAttribute("category", cat1);
+    @RequestMapping("/category/{id}")
+    public String displayCategoryPage(Model model, @PathVariable Long id) {
+        model.addAttribute("category", categoryStorage.retrieveCategoryById(id));
         return "Category";
     }
 
