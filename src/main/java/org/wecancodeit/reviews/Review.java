@@ -1,13 +1,23 @@
 package org.wecancodeit.reviews;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+// added Entity annotation plus id and generatedValue annotations to Review class, plus no arg constructor
+
+@Entity
 public class Review {
 
+    @Id
+    @GeneratedValue
+    private long id;
     private String storeName;
     private String categories;
     private String content;
     private String userName;
     private String hashtags;
-    private long id;
+
 
     public Review(String storeName, String categories, String content, String userName, String hashtags,long id) {
         this.storeName = storeName;
@@ -16,6 +26,10 @@ public class Review {
         this.userName = userName;
         this.hashtags = hashtags;
         this.id = id;
+    }
+
+    public Review() {
+
     }
 
     public String getStoreName() {

@@ -18,9 +18,9 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Category specialty = new Category("Specialty", Collections.EMPTY_LIST, "Specialty stores are stores that house specialty itmes.");
+        Category specialty = new Category("Specialty", Collections.EMPTY_LIST, "Specialty stores are stores that house specialty items.");
         Category bigBox = new Category("Big Box", Collections.EMPTY_LIST, "Big box stores are big boxes full of food.");
-
+// need another repository for stores or just data for each store somewhere
         categoryStorage.addCategory(specialty);
         categoryStorage.addCategory(bigBox);
 

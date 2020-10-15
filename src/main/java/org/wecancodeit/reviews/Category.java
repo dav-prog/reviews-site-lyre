@@ -11,7 +11,8 @@ public class Category {
     @GeneratedValue
     private Long id;
     private String categoryName;
-    private Collection<Review> reviews;
+//     can't store a collection in a row
+//    private Collection<Review> reviews;
     private String description;
 
     protected Category() { }
@@ -19,10 +20,10 @@ public class Category {
     public String getCategoryName() {
         return categoryName;
     }
-
-    public Collection<Review> getReviews() {
-        return reviews;
-    }
+//this should be the responsibility of the review controller, not category controller
+//    public Collection<Review> getReviews() {
+//        return reviews;
+//    }
 
     public String getDescription() {
         return description;
@@ -30,7 +31,10 @@ public class Category {
 
     public Category(String categoryName, Collection<Review> reviews, String description) {
         this.categoryName = categoryName;
-        this.reviews = reviews;
+//        This no longer exists now that review collection is out
+//        this.reviews = reviews;
         this.description = description;
     }
+//    created a getter for id
+    public Long getId() { return id; }
 }
