@@ -1,10 +1,11 @@
 package org.wecancodeit.reviews.storage;
 
+import org.springframework.stereotype.Service;
 import org.wecancodeit.reviews.Store;
 import org.wecancodeit.reviews.repository.StoreRepository;
 
 import java.util.Optional;
-
+@Service
 public class StoreStorage {
     private StoreRepository storeRepo;
 
