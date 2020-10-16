@@ -2,6 +2,8 @@ package org.wecancodeit.reviews;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.wecancodeit.reviews.storage.CategoryStorage;
+import org.wecancodeit.reviews.storage.ReviewStorage;
 
 import java.util.Collections;
 

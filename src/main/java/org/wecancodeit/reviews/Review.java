@@ -28,7 +28,7 @@ public class Review {
         this.id = id;
     }
 
-    public Review() {
+    protected Review() {
 
     }
 

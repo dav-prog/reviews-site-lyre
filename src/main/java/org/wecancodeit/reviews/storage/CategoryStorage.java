@@ -1,11 +1,9 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.Category;
+import org.wecancodeit.reviews.repository.CategoryRepository;
 
-import javax.persistence.Id;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Optional;
 
 @Service
