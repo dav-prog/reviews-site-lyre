@@ -1,17 +1,12 @@
 package org.wecancodeit.reviews;
 
-//  ***create storage for store data
-//  **create repository for stores
-//  ***add in to populator all store info
+// ***resolve 404 with the home.
 //  ***create controller for store info?
-//  go back and make sure all links in templates are thymeleafed up
-//  replace any lorem ipsum!!!!
+//  ***go back and make sure all links in templates are thymeleafed up
 //  **get into JPA and database ish
+//  *replace any lorem ipsum!!!!
 //  change images on cards
 //  **add reviews & hashtags
-
-//  stuff we need to know about store:
-//
 
 
 public class Store {
