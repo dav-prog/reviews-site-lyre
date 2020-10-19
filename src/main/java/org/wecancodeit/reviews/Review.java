@@ -11,7 +11,7 @@ public class Review {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     private String storeName;
     private String categories;
     private String content;
@@ -19,7 +19,7 @@ public class Review {
     private String hashtags;
 
 
-    public Review(String storeName, String categories, String content, String userName, String hashtags,long id) {
+    public Review(String storeName, String categories, String content, String userName, String hashtags,Long id) {
         this.storeName = storeName;
         this.categories = categories;
         this.content = content;
@@ -52,7 +52,7 @@ public class Review {
         return hashtags;
     }
 
-    public long getId() { return id;}
+    public Long getId() { return id;}
 
 }
 

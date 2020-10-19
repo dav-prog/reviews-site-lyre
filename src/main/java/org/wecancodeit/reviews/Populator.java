@@ -22,14 +22,14 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Category specialty = new Category("Specialty", Collections.EMPTY_LIST, "Specialty stores are stores that house specialty items.");
-        Category bigBox = new Category("Big Box", Collections.EMPTY_LIST, "Big box stores are big boxes full of food.");
+        Category specialty = new Category("Specialty", "Specialty stores are stores that house specialty items.");
+        Category bigBox = new Category("Big Box", "Big box stores are big boxes full of food.");
 // need another repository for stores or just data for each store somewhere
         categoryStorage.addCategory(specialty);
         categoryStorage.addCategory(bigBox);
 
-        Store luckys = new Store(1, "Lucky's", specialty, "Lucky's is locally-owned and operated. Its also a fresh market with natural and organic options.");
-        Store samsClub = new  Store(2, "Sam's Club", bigBox, "Sam's Club specializes in bulk and with a paid membership.");
+        Store luckys = new Store((long) 1, "Lucky's", specialty, "Lucky's is locally-owned and operated. Its also a fresh market with natural and organic options.");
+        Store samsClub = new  Store((long) 2, "Sam's Club", bigBox, "Sam's Club specializes in bulk and with a paid membership.");
         storeStorage.addStore(luckys);
         storeStorage.addStore(samsClub);
 

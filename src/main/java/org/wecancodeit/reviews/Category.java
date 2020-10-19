@@ -29,7 +29,7 @@ public class Category {
         return description;
     }
 
-    public Category(String categoryName, Collection<Review> reviews, String description) {
+    public Category(String categoryName, String description) {
         this.categoryName = categoryName;
 //        This no longer exists now that review collection is out
 //        this.reviews = reviews;
