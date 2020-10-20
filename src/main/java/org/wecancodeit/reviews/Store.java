@@ -3,7 +3,6 @@ package org.wecancodeit.reviews;
 //  ***create controller for store info?
 //  ***go back and make sure all links in templates are thymeleafed up
 //  **get into JPA and database ish
-//  *replace any lorem ipsum!!!!
 //  change images on cards
 //  **add reviews & hashtags
 
