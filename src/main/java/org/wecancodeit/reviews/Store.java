@@ -1,6 +1,6 @@
 package org.wecancodeit.reviews;
 
-//  ***create controller for store info?
+//  ***create controller for store info? Maybe needs more work
 //  ***go back and make sure all links in templates are thymeleafed up
 //  **get into JPA and database ish
 //  change images on cards

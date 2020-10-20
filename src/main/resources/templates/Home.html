@@ -13,7 +13,7 @@
     <nav class="navbar">
         <ul>
             <li><a th:href="'/Home'">Home</a></li>
-            <li><a href="#">Reviews</a></li>
+            <li><a th:href="'/Review/'">Reviews</a></li>
         </ul>
     </nav>
 
@@ -27,7 +27,6 @@
         <p class="home-write">Harp is your best source of reviewing grocery stores in the Greater Columbus Area. At Harp, we strive to give you the most accurate and up to date reviews about your favorite supermarkets.</p>
         <h2 class="Con-List">Categories</h2>
         <ul class="Categories">
-<!--            removed word specialty from anchor tag-->
             <li th:each="category:${categories}"><a th:text="${category.categoryName}" th:href="'/category/' + ${category.id}"></a>
             </li>
 
