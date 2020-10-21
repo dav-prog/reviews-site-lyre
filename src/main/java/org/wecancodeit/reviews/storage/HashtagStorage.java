@@ -1,11 +1,12 @@
 package org.wecancodeit.reviews.storage;
 
 
+import org.springframework.stereotype.Service;
 import org.wecancodeit.reviews.Hashtag;
 import org.wecancodeit.reviews.repository.HashtagRepository;
 
 import java.util.Optional;
-
+@Service
 public class HashtagStorage {
 
     private HashtagRepository hashtagRepo;

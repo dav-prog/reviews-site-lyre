@@ -1,8 +1,7 @@
 package org.wecancodeit.reviews;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
 
 // added Entity annotation plus id and generatedValue annotations to Review class, plus no arg constructor
 
@@ -13,19 +12,22 @@ public class Review {
     @GeneratedValue
     private Long id;
     private String storeName;
-    private String categories;
+    @ManyToOne
+    private Category category;
+    @Lob
     private String content;
     private String userName;
-    private String hashtags;
+    @ManyToMany(mappedBy = "reviews")
+    private Collection<Hashtag> hashtags;
 
 
-    public Review(String storeName, String categories, String content, String userName, String hashtags,Long id) {
+
+
+    public Review(String storeName, Category category, String content, String userName) {
         this.storeName = storeName;
-        this.categories = categories;
+        this.category = category;
         this.content = content;
         this.userName = userName;
-        this.hashtags = hashtags;
-        this.id = id;
     }
 
     protected Review() {
@@ -36,8 +38,8 @@ public class Review {
         return storeName;
     }
 
-    public String getCategories() {
-        return categories;
+    public Category getCategory() {
+        return category;
     }
 
     public String getContent() {
@@ -48,7 +50,7 @@ public class Review {
         return userName;
     }
 
-    public String getHashtags() {
+    public Collection<Hashtag> getHashtags() {
         return hashtags;
     }
 

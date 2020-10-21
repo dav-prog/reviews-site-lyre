@@ -1,10 +1,12 @@
 package org.wecancodeit.reviews;
 
-//  ***create controller for store info? Maybe needs more work
-//  ***go back and make sure all links in templates are thymeleafed up
+//  clean up thymeleaf, any stray hardcoded items
 //  **get into JPA and database ish
 //  change images on cards
-//  **add reviews & hashtags
+//  delete unneeded files
+//  link hashtags to reviews
+//  do some extra CSS styling
+
 
 import javax.persistence.*;
 
