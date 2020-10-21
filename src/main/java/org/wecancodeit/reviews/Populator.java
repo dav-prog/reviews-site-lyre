@@ -3,6 +3,7 @@ package org.wecancodeit.reviews;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancodeit.reviews.storage.CategoryStorage;
+import org.wecancodeit.reviews.storage.HashtagStorage;
 import org.wecancodeit.reviews.storage.ReviewStorage;
 import org.wecancodeit.reviews.storage.StoreStorage;
 
@@ -13,12 +14,19 @@ public class Populator implements CommandLineRunner {
     private StoreStorage storeStorage;
     private CategoryStorage categoryStorage;
     private ReviewStorage reviewStorage;
+    private HashtagStorage hashtagStorage;
 
-    public Populator(CategoryStorage categoryStorage, ReviewStorage reviewStorage, StoreStorage storeStorage) {
+
+    public Populator(StoreStorage storeStorage, CategoryStorage categoryStorage, ReviewStorage reviewStorage, HashtagStorage hashtagStorage) {
+        this.storeStorage = storeStorage;
         this.categoryStorage = categoryStorage;
         this.reviewStorage = reviewStorage;
-        this.storeStorage = storeStorage;
+        this.hashtagStorage = hashtagStorage;
     }
+
+
+
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -32,6 +40,11 @@ public class Populator implements CommandLineRunner {
         Store samsClub = new  Store((long) 2, "Sam's Club", bigBox, "Sam's Club specializes in bulk and with a paid membership.");
         storeStorage.addStore(luckys);
         storeStorage.addStore(samsClub);
+
+        Hashtag hashtag1 = new Hashtag(1L,"#organic",Collections.EMPTY_LIST);
+        hashtagStorage.addHashtag(hashtag1);
+
+
 
 
 
