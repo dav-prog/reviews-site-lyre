@@ -21,6 +21,3 @@ public class CategoryController {
     }
 
 }
-//to do link BigBox to BigBox
-// link big box to Sam's Club
-

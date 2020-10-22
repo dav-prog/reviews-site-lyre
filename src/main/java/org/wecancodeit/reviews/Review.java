@@ -19,15 +19,17 @@ public class Review {
     private String userName;
     @ManyToMany(mappedBy = "reviews")
     private Collection<Hashtag> hashtags;
+    private String imageUrl;
 
 
 
 
-    public Review(String storeName, Category category, String content, String userName) {
+    public Review(String storeName, Category category, String content, String userName, String imageUrl) {
         this.storeName = storeName;
         this.category = category;
         this.content = content;
         this.userName = userName;
+        this.imageUrl = imageUrl;
     }
 
     protected Review() {
@@ -55,6 +57,10 @@ public class Review {
     }
 
     public Long getId() { return id;}
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
 }
 
