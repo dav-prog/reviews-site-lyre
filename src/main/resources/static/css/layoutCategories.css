@@ -10,11 +10,11 @@
 }
 
 body {
-    color: red;
+    color: white;
 }
 
 .card{
-    margin-left: 10%;
+    /*margin-left: 10%;*/
 }
 .container{
     display: flex;
@@ -25,10 +25,10 @@ body {
 
 
 }
-.card-container{
-}
+
 .header {
-    color: red;
+    color: black;
+    text-align: center;
 }
 
 .review-container {

@@ -31,8 +31,8 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Category specialty = new Category("Specialty", "Specialty stores are stores that house specialty items.");
-        Category bigBox = new Category("Big Box", "Big box stores are big boxes full of food.");
+        Category specialty = new Category("Specialty", "Specialty stores provide unique and otherwise hard-to-find items that can't be found anywhere else. These items may come at a premium due to their scarce nature.");
+        Category bigBox = new Category("Big Box", "Big box stores are usually membership-only. Items are generic, but sold in bulk to reduce cost. Many provide sampling opportunities which may provide a social aspect of the shopping experience.");
 
         categoryStorage.addCategory(specialty);
         categoryStorage.addCategory(bigBox);

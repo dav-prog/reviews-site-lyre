@@ -9,7 +9,6 @@
     <nav class="navbar">
         <ul>
             <li><a th:href="'/Home'">Home</a> </li>
-            <li><a th:href="'/Review/'">Reviews</a> </li>
         </ul>
     </nav>
 </head>
@@ -17,16 +16,18 @@
 <div class="container">
     <div class="header">
         <h2 th:text="${review.storeName}"class="Review">Review</h2>
-        <p class="about-review">This is a description of what our reviews are.</p>
+        <p class="about-review"></p>
         <h3 class="review-header">Reviews</h3>
     </div>
     <div class="card">
         <img class="R-img" th:src="${review.imageUrl}" alt="Avatar" style="width:100%">
         <div class="card-container">
             <h4 th:text="${review.storeName}"></h4>
-            <p th:text="${review.content}">User Review Here!</a></p>
+            <p th:text="${review.content}"></p>
+            <p th:text="'Submitted by: ' + ${review.userName}">Submitted by </p>
         </div>
     </div>
+    <button type="button" onclick="window.history.go(-1);">Back</button>
 
 </div>
 </body>
